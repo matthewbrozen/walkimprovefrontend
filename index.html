@@ -10,18 +10,40 @@
     <section ng-controller="ReportsController as reportsCtrl">
       <div class="heading">
         <h1>Reports</h1>
-        {{1+1}}
       </div>
 
       <ul id="reports">
         <li ng-repeat="report in reportsCtrl.all">
-          <p>report</p>{{report.intersection}}
-          {{report.direction}}
-          {{report.details}}
-
-          <button ng-click="reportsCtrl.deleteReport(report)" class="delete">X</button>
-        </li>
+          <h2>Poor SideWalk Report</h2>
+          <h3> @Intersection</h3>{{report.intersection}}
+          <h3> Direction</h3> {{report.direction}}
+          <h3> Details</h3> {{report.details}}
+          <h3> Delete Report </h3> <button ng-click="reportsCtrl.deleteReport(report)" class="delete">X</button>
+            <p>-------------------------------------</p>
+      </li>
       </ul>
+
+      <form id="newReport" ng-submit="reportsCtrl.addReport()">
+      <div>
+        <label for="id">ID:</label>
+        <input type="text" name="id" ng-model="reportsCtrl.newReport.id">
+      </div>
+      <div>
+        <label for="intersection">Intersection:</label>
+        <input type="text" ng-model="reportsCtrl.newReport.intersection" name="intersection">
+      </div>
+      <div>
+        <label for="direction">Direction:</label>
+        <input type="text" ng-model="reportsCtrl.newReport.direction" name="direction">
+      </div>
+      <div>
+        <label for="details">Details:</label>
+        <input type="text" ng-model="reportsCtrl.newReport.details" name="details">
+      </div>
+      <div>
+        <input type="submit" value="Add Report">
+      </div>
+    </form>
 
     </section>
 
