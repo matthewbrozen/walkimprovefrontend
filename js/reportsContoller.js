@@ -10,7 +10,7 @@
   function ReportsController($http) {
     var vm = this;
 
-    vm.all = [];
+    vm.all= [];
     vm.newReport = {};
     vm.addReport = addReport;
     vm.deleteReport = deleteReport;

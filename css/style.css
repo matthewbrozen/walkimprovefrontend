@@ -1,28 +1,32 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,600,600italic,300italic);
 
 html {
-  border-left: 0.382rem solid red;
+  border-left: 0.382rem solid black;
   min-height: 100%;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Georgia', serif;
   font-weight: 300;
   font-size: 16px;
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.5;
+  background-image: url("http://heavyeditorial.files.wordpress.com/2013/04/mysterious-caves.jpg?quality=65&strip=all&w=780");
 }
 
-h1 {
+h1{
+  font-size:4rem;
+}
+h2{
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 4.8rem;
-  margin: 4.8rem auto 0;
+  font-size: 4rem;
+  margin: 4rem auto 0;
   letter-spacing: -2px;
 }
 
-h1:after {
-  content: "™";
+h2:after {
+  content: "Santa Monica";
   font-size: 1.4rem;
   vertical-align: super;
   position: relative;
@@ -134,4 +138,19 @@ form#newCriminal input[type=submit]:hover {
 form#newCriminal input[type=submit]:focus {
   box-shadow: none;
   outline: none;
+}
+
+p{
+  font-size:2rem;
+}
+
+#posttop{
+  font-size:4rem;
+}
+
+.back{
+  border:1px solid black;
+  background:white;
+  margin:20px;
+  padding:60px;
 }
