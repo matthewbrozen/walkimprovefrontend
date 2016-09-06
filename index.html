@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="WalkImproveApp">
+  <head>
+    <meta charset="utf-8">
+    <title>WalkImrpove</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  </head>
+  <body>
+    <section ng-controller="ReportsController as reportsCtrl">
+      <div class="heading">
+        <h1>Reports</h1>
+        {{1+1}}
+      </div>
+
+      <ul id="reports">
+        <li ng-repeat="report in reportsCtrl.all">
+          <p>report</p>{{report.intersection}}
+          {{report.direction}}
+          {{report.details}}
+
+          <button ng-click="reportsCtrl.deleteReport(report)" class="delete">X</button>
+        </li>
+      </ul>
+
+    </section>
+
+    <script src="./js/app.js" charset="utf-8"></script>
+    <script src="./js/reportsContoller.js" charset="utf-8"></script>
+  </body>
+</html>
