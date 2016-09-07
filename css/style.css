@@ -12,7 +12,7 @@ body {
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.5;
-  background-image: url("http://heavyeditorial.files.wordpress.com/2013/04/mysterious-caves.jpg?quality=65&strip=all&w=780");
+  background-image: ("./sidewalk.jpg");
 }
 
 h1{
