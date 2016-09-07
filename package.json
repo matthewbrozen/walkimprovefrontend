@@ -1,0 +1,22 @@
+{
+  "name": "WalkImproveApp",
+  "version": "0.0.0",
+  "private": false,
+  "author": "WDI SM 24",
+  "devDependencies": {},
+  "engines": {
+    "node": "5.11.0",
+    "npm": "3.8.6"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "ejs": "^2.4.2",
+    "express": "4.13.3"
+  },
+  "cacheDirectories": [
+    "node_modules"
+  ]
+}
