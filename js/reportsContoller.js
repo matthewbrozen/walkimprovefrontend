@@ -16,7 +16,7 @@
     vm.deleteReport = deleteReport;
 
 
-    $http.get("/reports")
+    $http.get("https://walkimproveapi.herokuapp.com/reports")
       .then(function(response) {
         vm.all = response.data.allReports;
         console.log(vm.all);
@@ -25,7 +25,7 @@
       });
 
     function addReport() {
-      $http.post("/reports",
+      $http.post("https://walkimproveapi.herokuapp.com/reports",
         vm.newReport)
         .then(function(response) {
           vm.all.push(response.data.report);
@@ -46,7 +46,7 @@
 
     function deleteReport(report) {
       console.log(report._id);
-      $http.delete("/reports/"+report.id)
+      $http.delete("https://walkimproveapi.herokuapp.com/reports/"+report.id)
         .then(function() {
           vm.all.splice(vm.all.indexOf(report), 1);
         })
