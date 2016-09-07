@@ -16,7 +16,7 @@
     vm.deleteReport = deleteReport;
 
 
-    $http.get("backendUrl/reports")
+    $http.get("/reports")
       .then(function(response) {
         vm.all = response.data.allReports;
         console.log(vm.all);
@@ -25,13 +25,13 @@
       });
 
     function addReport() {
-      $http.post("backendUrl/reports",
+      $http.post("/reports",
         vm.newReport)
         .then(function(response) {
           vm.all.push(response.data.report);
           vm.newReport = {};
           console.log(vm.newReport);
-          $http.get("backendUrl/reports")
+          $http.get("/reports")
             .then(function(response) {
               vm.all = response.data.allReports;
               console.log(vm.all);
@@ -46,7 +46,7 @@
 
     function deleteReport(report) {
       console.log(report._id);
-      $http.delete("backendUrl/reports/"+report.id)
+      $http.delete("/reports/"+report.id)
         .then(function() {
           vm.all.splice(vm.all.indexOf(report), 1);
         })
