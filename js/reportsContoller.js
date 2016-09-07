@@ -31,7 +31,7 @@
           vm.all.push(response.data.report);
           vm.newReport = {};
           console.log(vm.newReport);
-          $http.get("/reports")
+          $http.get("https://walkimproveapi.herokuapp.com/reports")
             .then(function(response) {
               vm.all = response.data.allReports;
               console.log(vm.all);
