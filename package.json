@@ -12,6 +12,7 @@
     "test": "grunt test"
   },
   "dependencies": {
+    "angular-jwt-auth": "^4.0.10",
     "dotenv": "^2.0.0",
     "ejs": "^2.4.2",
     "express": "4.13.3",
