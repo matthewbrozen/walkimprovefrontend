@@ -8,7 +8,12 @@
     <script type="text/javascript">
        var backendUrl = "<%= backendUrl %>";
     </script>
+    <script src="/js/jwt-decode.2.0.1.js"></script>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-resource.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
 
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAa63CRm6piQT6Q6iwT_VmclKFx6-gNeq4&callback=initMap"
@@ -28,9 +33,20 @@
     }
 
     </script>
+
   </head>
   <body>
   <div class="back">
+
+    <header ng-controller="NavbarController as vm">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <a ui-sref="welcome" class="navbar-brand">Home</a>
+          <button ng-hide="vm.authService.isLoggedIn()" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
+          <button ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()" type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button>
+        </div>
+      </nav>
+    </header>
 
     <section ng-controller="ReportsController as reportsCtrl" >
     <h1> Welcome to WalkImprove!
@@ -82,5 +98,12 @@
 
     <script src="./js/app.js" charset="utf-8"></script>
     <script src="./js/reportsContoller.js" charset="utf-8"></script>
+    <script src="/js/app.module.js"></script>
+    <script src="/js/app.routes.js"></script>
+    <script src="/js/token.service.js"></script>
+    <script src="/js/auth.service.js"></script>
+    <script src="/js/user.service.js"></script>
+    <script src="/js/signin.controller.js"></script>
+    <script src="/js/navbar.controller.js"></script>
   </body>
 </html>
