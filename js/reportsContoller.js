@@ -46,7 +46,7 @@
 
     function deleteReport(report) {
       console.log(report._id);
-      $http.delete("https://walkimproveapi.herokuapp.com/reports/"+report.id)
+      $http.delete("https://walkimproveapi.herokuapp.com/reports/"+report._id)
         .then(function() {
           vm.all.splice(vm.all.indexOf(report), 1);
         })
